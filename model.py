@@ -3,14 +3,12 @@ from sklearn.ensemble import RandomForestClassifier  # Placeholder for your mode
 import pickle
 import networkx as nx
 
-
-X_combined=pd.read_csv('./datasets/hello.csv')
-X_combined.drop(columns=['Unnamed: 0'],inplace=True)
-file_path = "./datasets/new_disease_symptoms_dataset1.csv"
+X_combined=pd.read_csv('./datasets/preprocesseddata.csv')
+file_path = './datasets/modified_dataset (1).csv'
 data = pd.read_csv(file_path)
 def load_model():
     # Initialize and return a dummy model
-    model=pickle.load(open('./datasets/model_components.pkl', 'rb'))
+    model=pickle.load(open('./datasets/model_components1.pkl', 'rb'))
     return model
 
 

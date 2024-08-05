@@ -51,7 +51,7 @@ def send_email(user_record):
         "email": "john.doe@example.com",
         "name": "John Doe", 
         "disease": "fever",
-        "description": "xyz",
+        "description": "xyz",x
         "precautions": "don't go out",
         "medications": "paracitamol",
         "diet": "rice",

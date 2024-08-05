@@ -21,8 +21,6 @@ if 'form_submitted' not in st.session_state:
     st.session_state.form_submitted = False
 
 
-
-
 def login_page():
     st.title("Login")
     user_email = st.text_input("Email")
@@ -42,7 +40,7 @@ def display_report(user_record):
     st.write(f"Diet: {user_record['diet']}")
     st.write(f"Workout: {user_record['workout']}")
     st.subheader("Personalized Advice:")
-    st.write(f'{user_record['Personalized Advice']}')
+    st.write(f"{user_record['Personalized Advice']}")
 
 
 def details_page():
@@ -120,14 +118,12 @@ def display_existing_user(user_record):
     st.write(f"Have you recovered from {user_record['disease']}?")
     if st.button("Yes, recovered!"):
         delete_data({"email": user_record['email']})
-        schedule.cancel_job(scheduler.job_id)
         st.write("Response recieved! You will no longer recieve emails regarding this disease")
         st.rerun()
     
     if st.button("No"):
         st.write("Get well soon :-)")
         display_report(user_record)
-
 
 
 def main():
